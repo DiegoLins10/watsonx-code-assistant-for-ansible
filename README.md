@@ -159,6 +159,6 @@ O Lightspeed transforma esse comentário em:
 ---
 
 📄 **By Diego Lins**
-Engenheiro de Software | Especialista em Integrações AWS, .NET e Automação Ansible 
+Engenheiro de Software | Especialista em Integrações AWS, .NET e Automação Ansible  
 🔗 [IBM watsonx Code Assistant](https://cloud.ibm.com/watsonx/code-assistant)
 
