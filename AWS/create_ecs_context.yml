@@ -1,0 +1,62 @@
+---
+- name: ECS Cloud Operations
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  module_defaults:
+    group/aws:
+      region: us-east-1
+
+  vars:
+    ecs_cluster:
+      name: lightspeed-cluster
+      capacity_providers: ["FARGATE", "FARGATE_SPOT"]
+      tags:
+        function: lightspeed-demo
+  
+    ecs_task_definition:
+      family: lightspeed-task
+      cpu: 256
+      memory: 512
+      network_mode: awsvpc
+      container_definitions:
+        - name: lightspeed-container
+          image: amazonlinux
+          essential: true
+          command: ["echo", "Hello from Lightspeed ECS"]
+  
+    ecs_service:
+      name: lightspeed-service
+      desired_count: 1
+      launch_type: FARGATE
+      subnets:
+        - subnet-xxxxxx
+      security_groups:
+        - sg-xxxxxx
+      assign_public_ip: true
+
+  tasks:
+    # TASK 1
+    # # 1a. Uncomment task description below and generate a task suggestion.
+    # #     Note - Best practices: The suggestion will use the Fully Qualified Collection name (amazon.aws.ecs_cluster).
+    - name: Create ECS cluster using ecs_cluster var
+      community.aws.ecs_cluster:
+        name: "{{ _name_ }}"
+        state: present
+        capacity_providers: "{{ _capacity_providers_ }}"
+
+    # TASK 2
+    # # 2a. Uncomment task description below and generate a task suggestion.
+    # #     Note - Context: The suggestion should create an ECS task definition using ecs_task_definition var.
+    # - name: Register ECS task definition using ecs_task_definition var
+
+    # TASK 3
+    # # 3a. Uncomment task description below and generate a task suggestion.
+    # #     Note - Context: The suggestion should create an ECS service that references the cluster and task definition.
+    # - name: Create ECS service using ecs_service var
+
+    # TASK 4
+    # # 4a. Uncomment task description below and generate a task suggestion.
+    # #     Note - Accuracy: The suggestion will include a validation task to confirm ECS service deployment status.
+    # - name: Validate ECS service deployment
