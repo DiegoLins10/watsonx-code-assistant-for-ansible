@@ -143,6 +143,7 @@ O Lightspeed transforma esse comentário em:
 | `Ansible not found`             | PATH incorreto              | Adicione `/usr/local/bin` ao PATH                               |
 | `Red Hat authentication failed` | Token expirado              | Gere novo token em [cloud.redhat.com](https://cloud.redhat.com) |
 | `Invalid API key`               | Chave IBM incorreta         | Regere no portal IBM Cloud                                      |
+| `Model_id`                      | Chave IBM model id incorreta         | Acessar o seu ambiente IBM e pegar o space guid dentro dos espaços de implementação|
 
 ---
 
