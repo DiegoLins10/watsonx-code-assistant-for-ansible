@@ -1,0 +1,41 @@
+.vsc# 🧠 IBM watsonx Code Assistant / VS Code / Ansible
+
+# Diretórios de configuração do VS Code
+.vscode/
+
+# Arquivos temporários e cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+.env
+.venv
+env/
+venv/
+
+# Arquivos de log
+*.log
+
+# Arquivos de backup e sistema
+*.bak
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Configurações locais de Ansible
+*.retry
+*.vault_pass
+*.inventory
+
+# Configurações e builds do Linux/WSL
+*.tar
+*.zip
+*.gz
+.idea/
+.cache/
+
+# Arquivos gerados automaticamente
+*.out
+*.log
