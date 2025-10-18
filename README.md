@@ -1,4 +1,4 @@
-## 🧠 IBM watsonx Code Assistant – Lightspeed (L3)
+## 🧠 IBM watsonx Code Assistant – Lightspeed (L3) for Ansible
 
 ### 📘 Visão Geral
 
